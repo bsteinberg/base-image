@@ -6,7 +6,13 @@ FROM debian:8
 
 RUN apt-get update && \
     apt-get dist-upgrade -y && \
-    apt-get install -y curl python2.7 python2.7-dev python-setuptools && \
+    apt-get install -y \
+        curl \
+        git \
+        python2.7 \
+        python2.7-dev \
+        python-setuptools \
+        && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
