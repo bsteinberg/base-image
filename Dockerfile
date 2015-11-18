@@ -1,7 +1,7 @@
 FROM debian:8
 
 #----------------------------------------------------------#
-# Install Python                                           #
+# Install system packages                                  #
 #----------------------------------------------------------#
 
 RUN apt-get update && \
@@ -11,7 +11,10 @@ RUN apt-get update && \
         git \
         python2.7 \
         python2.7-dev \
+        python-ldap \
+        python-psycopg2 \
         python-setuptools \
+        supervisor \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
