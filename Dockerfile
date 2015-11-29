@@ -12,7 +12,6 @@ RUN apt-get update && \
         python2.7 \
         python2.7-dev \
         python-ldap \
-        python-psycopg2 \
         python-setuptools \
         supervisor \
         && \
