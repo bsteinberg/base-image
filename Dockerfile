@@ -7,6 +7,7 @@ FROM debian:8
 RUN apt-get update && \
     apt-get dist-upgrade -y && \
     apt-get install -y \
+        build-essential \
         curl \
         git \
         python2.7 \
