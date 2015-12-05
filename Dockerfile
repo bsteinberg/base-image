@@ -12,6 +12,7 @@ RUN apt-get update && \
         git \
         python2.7 \
         python2.7-dev \
+        python-eventlet \
         python-ldap \
         python-setuptools \
         supervisor \
