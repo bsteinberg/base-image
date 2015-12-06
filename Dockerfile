@@ -25,7 +25,8 @@ RUN apt-get update && \
 # Install Python packages                                  #
 #----------------------------------------------------------#
 
-RUN pip install uwsgi
+RUN easy_install pip && pip install \
+    uwsgi
 
 #----------------------------------------------------------#
 # Install node-5 (taken from Node's Dockerfile)            #
