@@ -1,0 +1,10 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - docker pull debian:8
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker build -t labsome/base-image:v$TRAVIS_BUILD_NUMBER .
+  - docker push labsome/base-image:v$TRAVIS_BUILD_NUMBER
