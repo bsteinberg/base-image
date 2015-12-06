@@ -59,7 +59,7 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
 # Install node modules                                     #
 #----------------------------------------------------------#
 
-RUN mkdir -p /opt/node && cd /opt/node && npm install \
+RUN npm install --global \
     bower \
     gulp \
     gulp-concat \
@@ -68,3 +68,5 @@ RUN mkdir -p /opt/node && cd /opt/node && npm install \
     gulp-ng-annotate \
     gulp-sass \
     gulp-uglify
+
+ENV NODE_PATH=/usr/local/lib/node_modules
