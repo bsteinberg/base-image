@@ -10,6 +10,7 @@ RUN apt-get update && \
         build-essential \
         curl \
         git \
+        nginx \
         python2.7 \
         python2.7-dev \
         python-eventlet \
