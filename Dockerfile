@@ -54,3 +54,17 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
   && grep " node-v$NODE_VERSION-linux-x64.tar.gz\$" SHASUMS256.txt.asc | sha256sum -c - \
   && tar -xzf "node-v$NODE_VERSION-linux-x64.tar.gz" -C /usr/local --strip-components=1 \
   && rm "node-v$NODE_VERSION-linux-x64.tar.gz" SHASUMS256.txt.asc
+
+#----------------------------------------------------------#
+# Install node modules                                     #
+#----------------------------------------------------------#
+
+RUN mkdir -p /opt/node && cd /opt/node && npm install \
+    bower \
+    gulp \
+    gulp-concat \
+    gulp-jade \
+    gulp-minify-css \
+    gulp-ng-annotate \
+    gulp-sass \
+    gulp-uglify
