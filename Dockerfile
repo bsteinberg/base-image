@@ -13,20 +13,12 @@ RUN apt-get update && \
         nginx \
         python2.7 \
         python2.7-dev \
-        python-eventlet \
         python-ldap \
         python-setuptools \
         supervisor \
         && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
-#----------------------------------------------------------#
-# Install Python packages                                  #
-#----------------------------------------------------------#
-
-RUN easy_install pip && pip install \
-    uwsgi
 
 #----------------------------------------------------------#
 # Install node-5 (taken from Node's Dockerfile)            #
